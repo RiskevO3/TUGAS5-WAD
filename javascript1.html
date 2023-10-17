@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan Javascript</title>
+</head>
+<body>
+    <p id="nama"></p>
+    <p id="umur"></p>
+    <p id="kelamin"></p>
+    <p id="pekerjaan"></p>
+    <button id="contohButton1" onclick="showBio()">
+        click me!
+    </button>
+</body>
+</html>
+<script>
+const changeFunc = () =>{
+    if(document.getElementById(`contohButton1`).innerHTML==`Hello From Javascript.`){
+        document.getElementById(`contohButton1`).innerHTML=`click me!`
+        return
+    }
+    document.getElementById(`contohButton1`).innerHTML=`Hello From Javascript.`
+}
+
+const showBio = () =>{
+    if(!document.getElementById('nama').innerHTML){
+        document.getElementById(`nama`).innerHTML=`Nama : Muhammad Fauzan`
+        document.getElementById(`umur`).innerHTML=`Umur : 20 Tahun`
+        document.getElementById(`kelamin`).innerHTML=`Jenis Kelamin : Laki-Laki`
+        document.getElementById(`pekerjaan`).innerHTML=`Pekerjaan : Mahasiswa`
+        return
+    }
+    document.getElementById(`nama`).innerHTML=``
+    document.getElementById(`umur`).innerHTML=``
+    document.getElementById(`kelamin`).innerHTML=``
+    document.getElementById(`pekerjaan`).innerHTML=``
+}
+</script>
